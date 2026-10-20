@@ -132,6 +132,9 @@
     L.push('', 'À approfondir ou modifier : ' + (S.q3 || '(non renseigné)'), 'Besoins particuliers : ' + (S.q5 || '(non renseigné)'));
     return L.join('\n');
   }
+  const MAILTO_MAX = 1800;
+  const PASTE = 'Bonjour Dany,\n\nMes réponses sont collées ci-dessous :\n\n';
+  const compact = () => summary().split('\n').filter((l) => !/\((non renseigné|aucun|aucun coché|sans choix)\)/.test(l)).join('\n').replace(/\n{3,}/g, '\n\n');
   function done() {
     const mine = S.prenom ? ((S.proj || {})[S.prenom] || {}).r : PEOPLE.some(([n]) => ((S.proj || {})[n] || {}).r);
     return [!!S.prenom, !!S.q1, MODS.some(([id]) => get(`mods.${id}.int`) || get(`mods.${id}.deep`) || get(`mods.${id}.mod`)), !!mine, !!S.fmt].filter(Boolean).length;
@@ -145,11 +148,28 @@
     $('#preview').textContent = t;
     const body = encodeURIComponent(t);
     const mail = $('#btn-mail'), wa = $('#btn-wa');
-    if (CONFIG.email) { mail.hidden = false; mail.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(CONFIG.objet)}&body=${body}`; }
+    if (CONFIG.email) {
+      const to = encodeURIComponent(CONFIG.email), su = encodeURIComponent(S.prenom ? `Formation IA : réponses de ${S.prenom}` : CONFIG.objet);
+      // un lien mailto trop long est coupé par certaines messageries Windows (~2 000 caractères) : version allégée, sinon copier-coller
+      const short = encodeURIComponent(compact());
+      const mb = body.length <= MAILTO_MAX ? body : short.length <= MAILTO_MAX ? short : encodeURIComponent(PASTE);
+      mail.dataset.paste = mb === body || mb === short ? '' : '1';
+      mail.href = `mailto:${CONFIG.email}?subject=${su}&body=${mb}`;
+      $('#btn-outlook').href = `https://outlook.live.com/mail/0/deeplink/compose?to=${to}&subject=${su}&body=${body}`;
+      $('#btn-gmail').href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${body}`;
+      [mail, $('#btn-outlook'), $('#btn-gmail')].forEach((a) => { a.hidden = false; });
+      $('#send-lead').textContent = 'Relisez vos réponses, puis choisissez votre messagerie : le message à Dany s’ouvre tout prêt, il ne reste qu’à cliquer sur « Envoyer ».';
+    }
     if (CONFIG.whatsapp) { wa.hidden = false; wa.href = `https://wa.me/${CONFIG.whatsapp}?text=${body}`; }
     if (!CONFIG.email && !CONFIG.whatsapp) $('#send-lead').textContent = 'Vos réponses restent dans votre navigateur tant que vous ne les envoyez pas. Copiez-les, puis collez-les dans un message à Dany.';
   }
   const hint = (t) => { $('#send-hint').textContent = t; };
+  ['#btn-mail', '#btn-outlook', '#btn-gmail'].forEach((s) => $(s).addEventListener('click', () => {
+    navigator.clipboard?.writeText(summary()).catch(() => {});
+    hint(s === '#btn-mail' && $('#btn-mail').dataset.paste
+      ? 'Vos réponses sont copiées : dans le message qui s’ouvre, collez-les (Ctrl+V ou ⌘+V), puis cliquez sur « Envoyer ».'
+      : 'Votre message s’ouvre, déjà rempli : vérifiez-le puis cliquez sur « Envoyer ». Merci !');
+  }));
   $('#btn-copy').addEventListener('click', async () => {
     const t = summary();
     try { await navigator.clipboard.writeText(t); hint('Copié ✓ Collez maintenant le texte dans un message à Dany.'); }
