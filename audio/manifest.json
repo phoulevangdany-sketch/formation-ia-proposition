@@ -1,0 +1,35 @@
+{
+ "resume": {
+  "duree": 17.2
+ },
+ "besoins": {
+  "duree": 12.9
+ },
+ "proposition": {
+  "duree": 16.0
+ },
+ "m1": {
+  "duree": 11.5
+ },
+ "m2": {
+  "duree": 10.1
+ },
+ "m3": {
+  "duree": 9.4
+ },
+ "m4": {
+  "duree": 9.9
+ },
+ "m5": {
+  "duree": 14.0
+ },
+ "m6": {
+  "duree": 11.9
+ },
+ "projets": {
+  "duree": 8.6
+ },
+ "avis": {
+  "duree": 9.7
+ }
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Formation IA · Votre proposition</title>
+<meta name="description" content="Proposition de formation à l’IA, au No-Code et à l’automatisation : parcourez-la, écoutez les explications et dites ce qui vous convient.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FBF7F0">
+<link rel="preload" href="assets/fonts/mulish-400.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23C8553A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="bar" id="bar">
+  <div class="bar__in">
+    <a class="bar__brand" href="#top" aria-label="Retour en haut"><span class="dot"></span>FORMATION IA</a>
+    <div class="bar__step" aria-hidden="true"><span id="bar-step">Votre proposition</span><i><b id="bar-progress"></b></i></div>
+    <a class="btn btn--sm" href="#avis">Donner mon avis</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================ Accueil -->
+<section class="hero" id="top">
+  <div class="wrap hero__in">
+    <p class="kick">Pour Sarah, Mélissa et Nobilie</p>
+    <h1>Votre formation à l’IA,<br><em>expliquée simplement.</em></h1>
+    <p class="hero__lead">Voici la proposition préparée après notre visioconférence. Écoutez, regardez, cochez ce qui vous intéresse et dites-moi ce qu’il faut ajuster. <strong>Rien n’est figé.</strong></p>
+    <div data-voice="resume" data-label="Écouter le résumé"></div>
+    <dl class="facts">
+      <div><dt>Mon temps d’intervention</dt><dd>30&nbsp;h</dd></div>
+      <div><dt>Pour chacune de vous</dt><dd>22&nbsp;h</dd></div>
+      <div><dt>Format</dt><dd>100&nbsp;% à distance</dd></div>
+    </dl>
+  </div>
+  <figure class="wrap hero__video">
+    <video id="film" controls playsinline preload="metadata" poster="media/poster.jpg">
+      <source src="media/presentation.mp4" type="video/mp4">
+      Votre navigateur ne lit pas la vidéo. <a href="media/presentation.mp4">Téléchargez-la ici.</a>
+    </video>
+    <figcaption>La présentation en vidéo (1 min 21, sous-titrée). <a href="media/Dossier_proposition_formation_IA.pdf" download>Télécharger le dossier complet (PDF, 12 pages)</a></figcaption>
+  </figure>
+  <p class="wrap status">Proposition non contractuelle, à valider avec vous. Ce n’est pas une certification.</p>
+</section>
+
+<!-- ============================================================ 1. Besoins -->
+<section class="sec" id="besoins" data-step="Ce que j’ai retenu">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="sec__num">01</p>
+      <h2>Ce que j’ai retenu de notre échange</h2>
+      <div data-voice="besoins" data-label="Écouter l’explication"></div>
+    </header>
+    <p class="sec__lead">Quatre besoins reviennent. <strong>Cochez ceux qui comptent pour vous</strong> et corrigez-moi si je me suis trompé.</p>
+    <div class="cards cards--4">
+      <label class="pick"><input type="checkbox" data-k="needs.n1"><span class="pick__box"></span><span class="pick__body"><b>Choisir le bon outil</b><small>ChatGPT, Claude, Perplexity : à chacun son usage, avec un regard critique.</small></span></label>
+      <label class="pick"><input type="checkbox" data-k="needs.n2"><span class="pick__box"></span><span class="pick__body"><b>Gagner du temps</b><small>Moins de tâches répétitives, moins de ressaisies.</small></span></label>
+      <label class="pick"><input type="checkbox" data-k="needs.n3"><span class="pick__box"></span><span class="pick__body"><b>Oser Claude Code</b><small>Sous Windows, pas à pas, en gardant la main sur chaque autorisation.</small></span></label>
+      <label class="pick"><input type="checkbox" data-k="needs.n4"><span class="pick__box"></span><span class="pick__body"><b>Rester en sécurité</b><small>Identifiants et données protégés ; validation humaine.</small></span></label>
+    </div>
+    <label class="field"><span>Un besoin manque ou je me suis trompé ?</span><textarea data-k="needsNote" rows="2" placeholder="Dites-le-moi en une phrase…"></textarea></label>
+  </div>
+</section>
+
+<!-- ============================================================ 2. Proposition -->
+<section class="sec sec--tint" id="proposition" data-step="La proposition">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="sec__num">02</p>
+      <h2>30&nbsp;heures pour moi, 22&nbsp;heures pour chacune</h2>
+      <div data-voice="proposition" data-label="Écouter l’explication"></div>
+    </header>
+    <p class="sec__lead">Ces deux chiffres ne désignent pas la même chose. Touchez un bouton pour voir la différence.</p>
+    <div class="tabs" role="tablist" aria-label="Choisir un point de vue">
+      <button class="tab is-on" role="tab" aria-selected="true" data-bar="30">Mon temps d’intervention</button>
+      <button class="tab" role="tab" aria-selected="false" data-bar="22">Votre temps, à chacune</button>
+    </div>
+    <div class="hours" id="hours" aria-live="polite">
+      <div class="hours__n"><strong id="h-total">30&nbsp;h</strong><span id="h-label">d’intervention du formateur</span></div>
+      <div class="bar2" aria-hidden="true"><i class="seg seg--a" id="seg-a" style="width:60%"><em>18&nbsp;h collectives</em></i><i class="seg seg--b" id="seg-b" style="width:40%"><em>12&nbsp;h individuelles (3&nbsp;×&nbsp;4&nbsp;h)</em></i></div>
+      <p class="hours__txt" id="h-txt">Les 18&nbsp;h collectives sont partagées : vous les suivez toutes les trois. Les 12&nbsp;h individuelles sont réparties à parts égales, soit 4&nbsp;h par personne.</p>
+    </div>
+    <div class="cards cards--2">
+      <div class="card"><h3>À retenir</h3><p>Il ne s’agit pas de «&nbsp;30 heures de formation par participante&nbsp;». Les exercices que vous faites seules entre les séances s’ajoutent, ils ne sont pas comptés dans ces heures.</p></div>
+      <div class="card"><h3>Et après ?</h3><p>Un suivi léger de 30&nbsp;jours est envisagé après la formation, en plus des 30&nbsp;h. Son contenu exact reste à préciser avec vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 3. Modules -->
+<section class="sec" id="modules" data-step="Les six modules">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="sec__num">03</p>
+      <h2>Six modules de 3&nbsp;heures</h2>
+    </header>
+    <p class="sec__lead">Ouvrez un module pour l’écouter et lire le détail. Pour chacun, <strong>cochez ce qui vous correspond</strong>.</p>
+    <div class="mods" id="mods"></div>
+    <p class="caution">Les outils avancés (skills, GitHub, API, MCP, agents) sont abordés en <strong>découverte et en exercice guidé</strong>. Je ne promets pas que vous les maîtriserez en 22&nbsp;heures.</p>
+  </div>
+</section>
+
+<!-- ============================================================ 4. Exemples -->
+<section class="sec sec--tint" id="exemples" data-step="Exemples concrets">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="sec__num">04</p>
+      <h2>Ce que vous pourrez faire</h2>
+    </header>
+    <p class="sec__lead">Des exemples de tâches, à titre de propositions. <strong>Cochez ceux que vous aimeriez travailler.</strong></p>
+    <div class="cards cards--3" id="ex"></div>
+    <p class="note">Les démonstrations utilisent des données fictives. Aucun exercice sur des données réelles n’aura lieu sans vérification préalable des accès et des données.</p>
+  </div>
+</section>
+
+<!-- ============================================================ 5. Projets -->
+<section class="sec" id="projets" data-step="Vos projets individuels">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="sec__num">05</p>
+      <h2>4&nbsp;heures sur votre sujet</h2>
+      <div data-voice="projets" data-label="Écouter l’explication"></div>
+    </header>
+    <p class="sec__lead">Ce sont des <strong>hypothèses</strong> déduites de notre échange. Répondez sur votre carte : vous les confirmez, les ajustez ou les remplacez.</p>
+    <div class="people" id="people"></div>
+  </div>
+</section>
+
+<!-- ============================================================ 6. Organisation -->
+<section class="sec sec--tint" id="organisation" data-step="L’organisation">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="sec__num">06</p>
+      <h2>Comment ça se passe</h2>
+    </header>
+    <div class="cards cards--3">
+      <div class="card"><h3>Format</h3><ul class="dots"><li><b>100&nbsp;% à distance</b> : visioconférence, partage d’écran.</li><li>Exercices entre les séances, avec corrections.</li><li>Calendrier à construire avec vous.</li></ul></div>
+      <div class="card"><h3>Méthode et ressources</h3><ul class="dots"><li>Démonstrations, exercices guidés, un projet collectif, un petit projet pour chacune.</li><li>Espace partagé, PDF, tutoriels vidéo, bibliothèque de prompts, guides Windows.</li></ul></div>
+      <div class="card"><h3>Évaluation</h3><ul class="dots"><li>Au départ : un diagnostic de vos compétences et de vos prérequis.</li><li>En route : des exercices pratiques à chaque module.</li><li>À la fin : vous présentez une réalisation ; un bilan individuel est rédigé.</li></ul></div>
+    </div>
+    <p class="note">Vous recevrez un bilan individuel, un portfolio de vos réalisations et une attestation adaptée au cadre applicable. Cette formation <strong>n’est pas une certification</strong> reconnue ni un titre professionnel.</p>
+
+    <h3 class="sub">Votre avis sur l’organisation</h3>
+    <fieldset class="group"><legend>Le format (100&nbsp;% à distance, 18&nbsp;h collectives + 4&nbsp;h individuelles) vous convient-il&nbsp;?</legend>
+      <label class="opt"><input type="radio" name="fmt" value="Il me convient" data-k="fmt"><span>Il me convient</span></label>
+      <label class="opt"><input type="radio" name="fmt" value="Il me convient avec des ajustements" data-k="fmt"><span>Il me convient avec des ajustements</span></label>
+      <label class="opt"><input type="radio" name="fmt" value="Il ne me convient pas" data-k="fmt"><span>Il ne me convient pas</span></label>
+    </fieldset>
+    <fieldset class="group"><legend>Quels créneaux vous conviennent le mieux&nbsp;? (plusieurs choix possibles)</legend>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" data-k="slots" value="Matin"><span>Matin</span></label>
+        <label class="chip"><input type="checkbox" data-k="slots" value="Midi"><span>Midi</span></label>
+        <label class="chip"><input type="checkbox" data-k="slots" value="Après-midi"><span>Après-midi</span></label>
+        <label class="chip"><input type="checkbox" data-k="slots" value="Fin de journée"><span>Fin de journée</span></label>
+        <label class="chip"><input type="checkbox" data-k="slots" value="Samedi"><span>Samedi</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="group"><legend>Comment préférez-vous suivre un module de 3&nbsp;h&nbsp;?</legend>
+      <label class="opt"><input type="radio" name="rythme" value="En une séance de 3 h" data-k="rythme"><span>En une séance de 3&nbsp;h</span></label>
+      <label class="opt"><input type="radio" name="rythme" value="En deux séances d’1 h 30" data-k="rythme"><span>En deux séances d’1&nbsp;h&nbsp;30</span></label>
+      <label class="opt"><input type="radio" name="rythme" value="Sans préférence" data-k="rythme"><span>Sans préférence</span></label>
+    </fieldset>
+    <label class="field"><span>Jours, horaires ou périodes à éviter</span><textarea data-k="contraintes" rows="2" placeholder="Par exemple : pas le vendredi, congés en…"></textarea></label>
+  </div>
+</section>
+
+<!-- ============================================================ 7. Avis -->
+<section class="sec sec--decision" id="avis" data-step="Votre avis">
+  <div class="wrap wrap--narrow">
+    <header class="sec__head sec__head--center">
+      <p class="sec__num">07</p>
+      <h2>Votre avis</h2>
+      <div data-voice="avis" data-label="Écouter le mot de la fin"></div>
+    </header>
+
+    <fieldset class="group"><legend>Qui êtes-vous&nbsp;?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="prenom" value="Sarah" data-k="prenom"><span>Sarah</span></label>
+        <label class="chip"><input type="radio" name="prenom" value="Mélissa" data-k="prenom"><span>Mélissa</span></label>
+        <label class="chip"><input type="radio" name="prenom" value="Nobilie" data-k="prenom"><span>Nobilie</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="group"><legend>La proposition correspond-elle à vos attentes&nbsp;?</legend>
+      <label class="opt"><input type="radio" name="q1" value="Oui, tout à fait" data-k="q1"><span>Oui, tout à fait</span></label>
+      <label class="opt"><input type="radio" name="q1" value="Plutôt oui" data-k="q1"><span>Plutôt oui</span></label>
+      <label class="opt"><input type="radio" name="q1" value="En partie seulement" data-k="q1"><span>En partie seulement</span></label>
+      <label class="opt"><input type="radio" name="q1" value="Pas vraiment" data-k="q1"><span>Pas vraiment</span></label>
+    </fieldset>
+    <div class="recap" id="recap-mods" aria-live="polite"></div>
+    <label class="field"><span>Que souhaitez-vous approfondir ou modifier&nbsp;?</span><textarea data-k="q3" rows="3" placeholder="Un module, un exemple, votre projet…"></textarea></label>
+    <label class="field"><span>Avez-vous des besoins particuliers&nbsp;? (matériel, accès à votre poste, rythme, accessibilité…)</span><textarea data-k="q5" rows="3"></textarea></label>
+
+    <div class="send" id="send">
+      <h3>Envoyer mes réponses</h3>
+      <p class="send__lead" id="send-lead">Vos réponses restent dans votre navigateur tant que vous ne les envoyez pas. Relisez-les, puis choisissez comment me les transmettre.</p>
+      <pre class="preview" id="preview" tabindex="0" aria-label="Aperçu de vos réponses"></pre>
+      <div class="send__btns">
+        <a class="btn" id="btn-mail" href="#" hidden>Envoyer par e-mail</a>
+        <a class="btn btn--wa" id="btn-wa" href="#" hidden target="_blank" rel="noopener">Envoyer par WhatsApp</a>
+        <button class="btn" id="btn-copy" type="button">Copier mes réponses</button>
+        <button class="btn btn--ghost" id="btn-dl" type="button">Télécharger (.txt)</button>
+      </div>
+      <p class="send__hint" id="send-hint" role="status"></p>
+    </div>
+  </div>
+</section>
+
+<section class="fine wrap" id="transparence">
+  <details class="fold"><summary>Ce que j’ai décidé, ce que vous décidez</summary>
+    <div class="two">
+      <div><h4>Mon cadrage de départ</h4><ul class="dots"><li>30&nbsp;h d’intervention : 18&nbsp;h collectives + 12&nbsp;h individuelles.</li><li>22&nbsp;h d’accompagnement direct par participante.</li><li>Six modules de 3&nbsp;h, 100&nbsp;% à distance.</li><li>Outils avancés en découverte seulement.</li><li>Données fictives, aucun secret partagé, validation humaine.</li><li>Évaluations : diagnostic, exercices, présentation finale.</li><li>Suivi léger de 30&nbsp;jours, hors des 30&nbsp;h.</li></ul></div>
+      <div><h4>À valider avec vous</h4><ul class="dots"><li>Vos besoins, vos projets et l’exactitude des intitulés.</li><li>Calendrier, horaires et présence.</li><li>Volume des exercices entre les séances.</li><li>Postes Windows et droits d’installation.</li><li>Licences Claude Team et données utilisables.</li><li>Modalités administratives et de prise en charge.</li><li>Contenu exact du suivi de 30&nbsp;jours.</li><li>Objectifs et critères d’évaluation définitifs.</li></ul></div>
+    </div>
+  </details>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p>Formation «&nbsp;Initiation à l’IA, au No-Code et à l’automatisation&nbsp;» · proposition non contractuelle, programme non figé · préparée par Dany Phoulevang · octobre 2026.</p>
+  <p class="foot__small">Voix des explications : voix de synthèse. Vos réponses ne sont enregistrées que dans votre navigateur jusqu’à l’envoi.</p>
+</div></footer>
+
+<div class="tray" id="tray" aria-live="polite"><span>Vos réponses</span><strong id="tray-n">0&nbsp;/&nbsp;5</strong><a class="btn btn--sm" href="#avis">Envoyer</a></div>
+
+<script src="app.js"></script>
+</body>
+</html>
