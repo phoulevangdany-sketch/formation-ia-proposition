@@ -1,0 +1,3 @@
+# aucun robot
+User-agent: *
+Disallow: /
